@@ -8,13 +8,13 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
-    @new_book = Book.new
+    @book = Book.new
   end
 
   def create
     @book = Book.new(book_params)
     @book.user_id = current_user.id
-    if @book.save(book_params)
+    if @book.save
       redirect_to book_path(@book.id), notice: "You have created book successfully."
     else
       @books = Book.all

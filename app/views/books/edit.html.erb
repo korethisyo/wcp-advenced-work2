@@ -14,7 +14,6 @@
           </ul>
         </div>
       <% end %>
-      <%= render 'books/form', book: @book %>
   		<%= form_with model:@book, local:true do |f| %>
         <div class="form-group">
           <%= f.label :title %>
