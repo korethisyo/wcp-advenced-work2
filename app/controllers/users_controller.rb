@@ -7,6 +7,14 @@ class UsersController < ApplicationController
     @book = Book.new
   end
 
+  def following
+    @users = User.all
+  end
+
+  def follower
+    @users = User.all
+  end
+
   def index
     @users = User.all
     @book = Book.new
