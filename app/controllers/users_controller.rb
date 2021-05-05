@@ -8,11 +8,13 @@ class UsersController < ApplicationController
   end
 
   def following
-    @users = User.all
+    @user = User.find(params[:id])
+    @following = @user.following_user
   end
 
   def follower
-    @users = User.all
+    @user = User.find(params[:id])
+    @follower = @user.follower_user
   end
 
   def index

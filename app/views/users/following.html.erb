@@ -7,7 +7,7 @@
     <th></th>
     <th></th>
   </thead>
-  <% @users.each do |user| %>
+  <% @following.each do |user| %>
   <tbody>
     <tr>
       <td><%= attachment_image_tag(user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %></td>
